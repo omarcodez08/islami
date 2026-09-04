@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:islami/core/resources/routes_manager.dart';
+import 'package:islami/ui/home/screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,13 +9,15 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
    debugShowCheckedModeBanner:false,
-      routes: {},
-      
+      routes: {
+     RoutesManager.homeRouteName:(context) =>HomeScreen()
+
+      },
+    initialRoute: RoutesManager.homeRouteName,
     );
   }
 }
