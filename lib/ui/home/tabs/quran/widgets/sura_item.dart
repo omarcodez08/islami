@@ -13,7 +13,7 @@ SuraItem(this.suraModel);
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-        Navigator.pushNamed(context, RoutesManager.suraDetailsRouteName,arguments: suraModel);
+        Navigator.pushNamed(context, RoutesManager.suraDetailsRouteName,arguments: suraModel );
       },
       child: Row(
         children: [
