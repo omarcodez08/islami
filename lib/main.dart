@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:islami/core/resources/routes_manager.dart';
+import 'package:islami/ui/hadeeth_details/screen/hadeeth_details_screen.dart';
 import 'package:islami/ui/home/screen/home_screen.dart';
 import 'package:islami/ui/sura_details/screen/sura_details_screen.dart';
+
+import 'core/resources/routes_manager.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,17 +12,17 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-   debugShowCheckedModeBanner:false,
+      debugShowCheckedModeBanner:false,
       routes: {
-     RoutesManager.homeRouteName:(context) =>HomeScreen(),
+        RoutesManager.homeRouteName:(context)=>HomeScreen(),
         RoutesManager.suraDetailsRouteName:(context)=>SuraDetailsScreen(),
-
+        RoutesManager.hadethDetailRouteName:(context)=>HadeethDetailsScreen(),
       },
-    initialRoute: RoutesManager.homeRouteName,
+      initialRoute: RoutesManager.homeRouteName,
     );
   }
 }
-
